@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>박수민</title>
+    </head>
+    <body>    
+        <header>
+            <h1>동아리 가입</h1>
+        </header>
+        <section>
+            <h3>동아리 가입 양식</h3>
+        </section>
+        <article>
+            <form>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name"><br/>
+                <label for="major">학부/학과</label>
+                <select id="major" name="major">
+                    <option value="소프트웨어학부">소프트웨어학부</option>
+                    <option value="경영학부">경영학부</option>
+                    <option value="경제학부">경제학부</option>
+                    <option value="기초공학부">기초공학부</option>
+                </select><br/>
+                
+                <label for="level">학년</label>
+                <input type="radio" id="one" name="level" value="1학년">
+                <label for="one">1학년</label>
+                <input type="radio" id="two" name="level" value="2학년">
+                <label for="two">2학년</label>
+                <input type="radio" id="three" name="level" value="3학년">
+                <label for="three">3학년</label>
+                <input type="radio" id="four" name="level" value="4학년">
+                <label for="four">4학년</label><br/>
+
+                <label for="number">학번</label>
+                <input type="text" id="number" name="number"><br/>
+
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email"><br/>
+
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br/>
+
+                <label for="reason">가입동기</label>
+                <textarea name="reason" rows="2" cols="20"></textarea><br/>
+
+                <input type="submit" value="가입하기">
+                <input type="reset" value="취소하기">
+
+            </form>
+        </article>
+
+    </body>
+
+</html>
