@@ -1,0 +1,86 @@
+header{
+  padding-top: 15px;
+  background: repeating-linear-gradient(90deg, #d5b32c, #d5b32c 10px, #f4f0e1 0, #f4f0e1 50px);
+  height: 80px;
+}
+footer {
+    background-color: #f8f9fa; 
+    border-top: 1px solid #dee2e6; 
+    padding: 10px 0;
+  }
+  
+.else {
+    display: flex;
+    justify-content: center;
+  }
+section {
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+    background-color: rgb(243, 243, 230);
+  }
+
+.icon-webname {
+    width: 1em; 
+    height: auto;  
+
+  }
+.icon-image {
+    width: 1em; 
+    height: auto;  
+  }
+
+.jua-regular {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 7px;
+}
+
+.nav-link{
+  font-size: 20px;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+.nav-link, .dropdown-item {
+  color: #771515;
+}
+.dropdown-item{
+  font-size: 15px;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-item.dropdown .nav-link::after {
+  display: none;
+}
+
+header, nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+header {
+  top: 0;
+  left: 0;
+}
+
+nav {
+  top: 60px; 
+  left: 0;
+
+}
+
+body {
+  padding-top: 120px; 
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, span {
+  font-family: 'Jua', sans-serif;
+}
+  

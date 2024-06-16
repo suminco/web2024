@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id = "demo"></div>
+    <script>
+        let time = prompt("카운트다운할 숫자를 입력하세요.")
+        const x= setInterval(myFunction, 1000);
+        function myFunction(){
+            document.getElementById("demo").innerHTML=time;
+            time--;
+
+            if(time<0){
+                clearInterval(x);
+                document.getElementById("demo").innerHTML ="타이머 종료"
+            }
+        }
+    </script>
+
+</body>
+</html>

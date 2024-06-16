@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        let name = prompt("이름을 입력하시오")
+        let age = prompt("나이를 입력하시오(숫자)")
+        let height = prompt("키를 입력하시오(숫자)")
+        let weight = prompt("체중을 입력하시오(숫자)")
+
+        let percentage=function(age,height,weight){
+           per= weight/((height/100)**2)
+            if (age>=30){
+                if(per>30)
+                   return "비만";
+                else if (per>=25 && per<=30)
+                    return "과체중";
+                else if (per>=18.5 && per<=24)
+                    return "표준체중";
+                else if (per<=18.4)
+                    return "저체중"; 
+                   }
+            else{
+                if(per>30)
+                   return "비만";
+                else if (per>=24 && per<=30)
+                    return "과체중";
+                else if (per>=18 && per<=23)
+                    return "표준체중";
+                else if (per<=17.9)
+                    return "저체중"; 
+                   }
+        }
+        let result=percentage(age,height,weight)
+        document.write("이름:" +name+"<br>")
+        document.write("나이:" +age+"<br>")
+        document.write("키:" +height+"<br>")
+        document.write("체중:" +weight+"<br>")
+        document.write("당신은 " +result+"("+per+")입니다.")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.col{
+    border-style: solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    margin-left: 46.5px;
+    background-color: whitesmoke;
+
+}
+.h2{
+    font-size: 30px;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    margin-right: -100px;
+
+}
+body, h1, h2, h3, h4, h5, h6, p, a, li, span {
+    font-family: 'Jua', sans-serif;
+  }

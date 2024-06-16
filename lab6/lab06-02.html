@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>로또 번호 생성결과</h1>
+        <button onclick="randomnum()">로또 번호 생성하기</button>
+        <p id="lottonum"></p>
+        <button onclick="javascript:window.close();">닫기</button>
+        <script>
+            function randomnum(){
+                const lotto=[];
+                const lottonums=document.getElementById('lottonum');
+                lottonums.innerHTML = '';
+                while (lotto.length<6){
+                    const picked=Math.floor((Math.random()*45)+1);
+                    if (!lotto.includes(picked)){
+                        lotto.push(picked);
+                    }
+                }
+                lottonums.innerHTML="결과:"+ lotto.join(",");
+            }
+        </script>
+    </body>
+</html>
