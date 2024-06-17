@@ -93,20 +93,20 @@
 <aside>
     <div id="info">
         <h1>회원 정보</h1>
-        <p><strong>아이디:</strong></p><p id="userid">회원가입 해주세요</p>
-        <p><strong>이름:</strong></p><p id="name">회원가입 해주세요</p>
-        <p><strong>성별:</strong></p><p id="gender">회원가입 해주세요</p>
-        <p><strong>전화번호:</strong></p><p id="phone">회원가입 해주세요</p>
-        <p><strong>이메일:</strong></p><p id="email">회원가입 해주세요</p>
+        <p><strong>아이디:</strong></p><p id="userid"></p>
+        <p><strong>이름:</strong></p><p id="name"></p>
+        <p><strong>성별:</strong></p><p id="gender"></p>
+        <p><strong>전화번호:</strong></p><p id="phone"></p>
+        <p><strong>이메일:</strong></p><p id="email"></p>
     </div>
 
     <script>
         window.onload = function() {
-            document.getElementById("userid").innerHTML = getCookie("userid");
-            document.getElementById("name").innerHTML = getCookie("name");
-            document.getElementById("gender").innerHTML = getCookie("gender");
-            document.getElementById("phone").innerHTML = getCookie("phone");
-            document.getElementById("email").innerHTML = getCookie("email");
+          document.getElementById("userid").innerHTML = getCookie("userid") || "회원가입 해주세요";
+          document.getElementById("name").innerHTML = getCookie("name") || "회원가입 해주세요";
+          document.getElementById("gender").innerHTML = getCookie("gender") || "회원가입 해주세요";
+          document.getElementById("phone").innerHTML = getCookie("phone") || "회원가입 해주세요";
+          document.getElementById("email").innerHTML = getCookie("email") || "회원가입 해주세요";
         };
 
         function getCookie(name) {
