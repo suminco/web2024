@@ -6,34 +6,44 @@
     <title>용산구 빵집</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style_main.css" rel="stylesheet">
-    <link href="style_cafe.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-    .col img {
-        margin: 40px;
-        width: 70%; 
-        height: auto; 
-        border: thick dotted #3b8448;
-        border-radius: 10px;
-        padding: 9px;
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-    }
-    .cafe-link{
-        font-size: 20px;
-        font-family: "Jua", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: #771515;
-    }
-    .row .col:hover{
-        box-shadow: 0 -10px 5px -5px #585858, 0 10px 5px -5px #585858;
-    }
+      .card-img-container {
+          overflow: hidden;
+          border-radius: 15px;
+          border: 5px solid #3b8448;
+      }
 
+      .card-img-top {
+          width: 100%;
+          height: 500px;
+      }
+
+      .card-body .cafe-link a {
+          font-size: 22px;
+          font-family: "Jua", sans-serif;
+          font-weight: 400;
+          color: #771515;
+          text-decoration: none;
+      }
+
+      .card {
+          border: none;
+          border-radius: 15px;
+      }
+
+      .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+      }
     </style>
   </head>
   <body>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <header>
       <div class="d-flex justify-content-between align-items-center">
@@ -78,19 +88,58 @@
       </ul>
     </nav>
     <section>
-        <div class="h2">용산구 빵집</div>
-        <div class="container text-center">
-            <div class="row row-cols-3">
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
-              <div class="col"><img src="용_빵집1.jpeg" width ><a class="cafe-link" href="yong_bread1.html"><br/>우스블랑</a></div>
+      <div class="h2 text-center my-4">용산구 빵집</div>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img id="ma1" src="용_빵집1.jpeg" class="card-img-top" alt="우스블랑">
+              <div class="card-body">
+                <h5 class="card-title cafe-link"><a href="yong_bread1.html">우스블랑</a></h5>
+              </div>
             </div>
           </div>
-
+          <div class="col">
+            <div class="card h-100">
+              <img id="ma2" src="용_빵집1.jpeg" class="card-img-top" alt="우스블랑">
+              <div class="card-body">
+                <h5 class="card-title cafe-link"><a href="yong_bread1.html">우스블랑</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img id="ma3" src="용_빵집1.jpeg" class="card-img-top" alt="우스블랑">
+              <div class="card-body">
+                <h5 class="card-title cafe-link"><a href="yong_bread1.html">우스블랑</a></h5>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </section>
+    <script>
+        let change = false;
+
+        window.onload = function() {
+            setInterval(myFunction, 5000);
+        };
+
+        function myFunction() {
+            if (change) {
+                document.getElementById("ma1").src = "용_빵집2.jpeg";
+                document.getElementById("ma2").src = "용_빵집2.jpeg";
+                document.getElementById("ma3").src = "용_빵집2.jpeg";
+            } else {
+                document.getElementById("ma1").src = "용_빵집1.jpeg";
+                document.getElementById("ma2").src = "용_빵집1.jpeg";
+                document.getElementById("ma3").src = "용_빵집1.jpeg";
+            }
+            change = !change;
+        }
+    </script>
+    
     <footer>
       <p class="else">관리자: 박수민<br/>
         Email: sumin41234@sookmyung.ac.kr<br/>
@@ -98,7 +147,5 @@
         사진 출처: 네이버, 구글
       </p>
     </footer>
-    
-    
   </body>
 </html>
