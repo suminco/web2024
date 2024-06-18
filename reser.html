@@ -27,11 +27,46 @@
         justify-content: space-around;
         align-items: center;
         margin-bottom: 10px;
+        flex-direction: column;
 
       }
       body{
         background-color: rgb(173, 216, 200);
       }
+      #set{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+      }
+      .circle{
+        width: 50px;
+        height: 50px;
+        border: solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: rgb(212, 163, 250);
+      }
+      .circle2{
+        width: 10px;
+        height: 10px;
+        border: solid rgb(83, 110, 100);
+        background-color: rgb(173, 216, 200);
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #c4{
+        background-color: azure;
+        color:rgb(99, 98, 98);
+        border-color: rgb(99, 98, 98);
+      }
+
     </style>
 
 
@@ -82,6 +117,17 @@
         </ul>
       </nav>
         <aside>
+            <div id="set">
+                <div class="circle">step1</div>
+                <div id="c1" class="circle2"></div>
+                <div id="c2" class="circle2"></div>
+                <div id="c3" class="circle2"></div>
+                <div id="c4"class="circle">step2</div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div class="circle2"></div>
+                <div id="c4"class="circle">완료</div>
+            </div>
           <form id="Form">
             <fieldset>
                 <legend>예약</legend>
@@ -110,19 +156,31 @@
             </fieldset>
         </form>
         <script>
-        function formcheck() {
-          let name = document.getElementById("name-input").value;
-          let num = document.getElementById("num").value;
-          let date = document.getElementById("date").value;
-          let time = document.getElementById("time").value;
-    
-          if (!name || !num || !date || !time ) {
-            window.alert("모든 필드를 채워주세요.");
-            return false;
-          } else {
-            window.alert("카페명: " + name + "\n방문인원: " + num + "\n방문날짜: " + date + "\n방문시간: " + time);
-            return true;}
-          };
+            function formcheck() {
+                let name = document.getElementById("name-input").value;
+                let num = document.getElementById("num").value;
+                let date = document.getElementById("date").value;
+                let time = document.getElementById("time").value;
+                if (!name || !num || !date || !time ) {
+                    window.alert("모든 필드를 채워주세요.");
+                    return false;
+                } else {
+                    window.alert("카페명: " + name + "\n방문인원: " + num + "\n방문날짜: " + date + "\n방문시간: " + time);
+                    return true;}
+                };
+            let current = 0; 
+            let color = "red"; 
+            window.onload = function() {
+                setInterval(changeColor, 2000);
+            };
+            function changeColor() {
+                document.getElementById("c1").style.backgroundColor = "";
+                document.getElementById("c2").style.backgroundColor = "";
+                document.getElementById("c3").style.backgroundColor = "";
+                let currentElementId = "c" + (current + 1);
+                document.getElementById(currentElementId).style.backgroundColor = color;
+                current = (current + 1) % 3
+            }
         </script>
 
         </aside>

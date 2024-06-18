@@ -27,10 +27,48 @@
         justify-content: space-around;
         align-items: center;
         margin-bottom: 10px;
+        flex-direction: column;
 
       }
       body{
         background-color: rgb(173, 216, 200);
+      }
+      #set{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+      }
+      .circle{
+        width: 50px;
+        height: 50px;
+        border: solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: rgb(212, 163, 250);
+      }
+      .circle2{
+        width: 10px;
+        height: 10px;
+        border: solid rgb(83, 110, 100);
+        background-color: rgb(173, 216, 200);
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #c4{
+        background-color: azure;
+        color:rgb(99, 98, 98);
+        border-color: rgb(99, 98, 98);
+      }
+      #c5{
+        background-color: rgb(128, 22, 226);
+        border: solid rgb(128, 22, 226);
       }
     </style>
 
@@ -82,6 +120,17 @@
         </ul>
       </nav>
         <aside>
+            <div id="set">
+                <div class="circle">step1</div>
+                <div id="c5"class="circle2"></div>
+                <div id="c5"class="circle2"></div>
+                <div id="c5"class="circle2"></div>
+                <div class="circle">step2</div>
+                <div id="c1"class="circle2"></div>
+                <div id="c2"class="circle2"></div>
+                <div id="c3"class="circle2"></div>
+                <div id="c4"class="circle">완료</div>
+            </div>
             <form id="Form">
                 <fieldset>
                     <legend>예약</legend>
@@ -112,6 +161,19 @@
                         return true;
                     }
                 };
+                let current = 0; 
+                let color = "red"; 
+                window.onload = function() {
+                setInterval(changeColor, 2000);
+                };
+                function changeColor() {
+                    document.getElementById("c1").style.backgroundColor = "";
+                    document.getElementById("c2").style.backgroundColor = "";
+                    document.getElementById("c3").style.backgroundColor = "";
+                    let currentElementId = "c" + (current + 1);
+                    document.getElementById(currentElementId).style.backgroundColor = color;
+                    current = (current + 1) % 3
+                }
                 </script>                
         </aside>
         
